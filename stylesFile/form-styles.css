@@ -2,14 +2,13 @@ body{
     margin: 0;
     padding: 0;
 }
-a{
-    text-decoration: none;
-}
 .container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px
+}
+a{
+    text-decoration: none;
 }
 .navbar{
     display: flex;
@@ -36,46 +35,53 @@ a{
 .navButton:hover{
     transform: scale(1.2);
 }
-.teams-page-container{
-    justify-content: center;
-    width: 80vw;
-    height: 70vh;
 
-    padding: 50px;
-    display: grid;
-    gap:50px;
-    grid-template-columns: repeat(auto-fill, 300px);
-    grid-template-rows: repeat(auto-fill, 300px);
+.form-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.team-info-card{
-    height: 300px;
-    width: 300px;
+.form-body{
+    height: 800px;
+    width: 700px;
     border: solid;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-.add-team-button{
+.form-elements-container{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    width: 120px;
-    height: 70px;
-    border-radius: 10px;
-    margin-top: 20px;
+}
+.form-element{
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+input{
+    width: 250px;
+    height: 30px;
+    font-size: 20px;
+}
+.submit-button{
+    margin-top: 50px;
+    width: 100px;
+    height: 50px;
     font-size: 20px;
     color: white;
     background-color: #1D428A;
     border: none;
     transition: .3s;
+    border-radius: 10px;
 }
-
-.add-team-button:hover{
+.submit-button{
     transform: scale(1.2);
 }
-.add-team-button:active{
+.submit-button{
     background-color: #193672;
 }
-
-    

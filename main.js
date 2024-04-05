@@ -47,7 +47,7 @@ window.addEventListener('DOMContentLoaded', () =>{
 
     //These run when the team pages is open
     if (window.location.href == "http://127.0.0.1:5500/team-page.html"){
-        
+
         //This takes each team object, creates an html card for it and then displays it on the team page
         const teamPageContainer = document.querySelector(".teams-page-container")
         for(let i = 0; i < teamsArr.length; i++){
@@ -92,8 +92,29 @@ window.addEventListener('DOMContentLoaded', () =>{
             teamInfoCard.appendChild(record)
             teamPageContainer.appendChild(teamInfoCard)
         }
-    }
 
+        //When button is clicked, we want to display a form
+        function displayForm(){
+            console.log("HELLLOOOOO")
+        }
+    }
+    //Used to handle submitting forms
+    if (window.location.href == "http://127.0.0.1:5500/add-team-form.html"){
+        function handleTeamSubmit(event){
+            //Issue right now is that the data isnt being saved because page refreshes, solution is to make a separate file with team data that updates when I send in a new object
+            event.preventDefault();
+            //Take the form payload and convert it into an object stored in data
+            const data = new FormData(event.target);
+            
+            teamsArr.push(new Team(data.get("team_name"), data.get("coach_name"), data.get("stadium_name"), data.get("city_name"), 0, 0, 0));
+            console.log(teamsArr[4])
+            //Take us back to the team page
+            //window.location.href = "http://127.0.0.1:5500/team-page.html"
+        }
+        //Add the submit function be be called when we submit the form
+        const form = document.querySelector("form")
+        form.addEventListener('submit', handleTeamSubmit)
+    }
 
 
 })

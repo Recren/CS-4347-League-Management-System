@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesFile/form-styles.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="homepage.html"><button class="navButton">Home</button></a>
+            <a href="team-page.html"><button class="navButton">Teams</button></a>
+            <a href="player-page.html"><button class="navButton">Players</button></a>
+            <a href="matches-page.html"><button class="navButton">Matches</button></a>
+        </div>
+        <div class="form-container">
+
+            <div class="form-body">
+                <h1 style="font-size: 50px; margin: 0; margin-top: 30px;">Add Team</h1>
+                <!--Will have to go back and at the right action to this to make sure it post data to database-->
+                <form class="form-elements-container" action="team-page.html" method="POST">
+                    <div class="form-element">
+                        <label for="team_name">Team Name:</label>
+                        <input type="text" id="team_name" name="team_name">
+                    </div>
+
+                    <div class="form-element">
+                        <label for="coach_name">Coach Name:</label>
+                        <input type="text" id="coach_name" name="coach_name">
+                    </div>
+
+                    <div class="form-element">
+                        <label for="stadium_name">Stadium Name:</label>
+                        <input type="text" id="stadium_name" name="stadium_name">
+                    </div>
+
+                    <div class="form-element">
+                        <label for="city_name">City Name:</label>
+                        <input type="text" id="city_name" name="city_name">
+                    </div>
+
+                    <button class="submit-button" type="submit">Add Team</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
